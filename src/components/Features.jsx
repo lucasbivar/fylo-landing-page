@@ -4,6 +4,8 @@ import iconAccessAnywhere from "../assets/images/icon-access-anywhere.svg";
 import iconSecurity from "../assets/images/icon-security.svg";
 import iconCollaboration from "../assets/images/icon-collaboration.svg";
 import iconAnyFile from "../assets/images/icon-any-file.svg";
+import '../styles/global.css'
+
 
 export default function Features(){
   return(

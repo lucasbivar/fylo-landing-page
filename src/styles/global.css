@@ -18,6 +18,10 @@ body{
   color: hsl(0, 0%, 100%);
 }
 
+h1, h2, h3{
+  font-family: Raleway, sans-serif;
+}
+
 .container-fluid{
   padding: 2% 5%;
 }
@@ -139,9 +143,78 @@ body{
 #features .grid-item img{
   margin-bottom: 6%;
 }
+#features h3{
+  font-size: 1.3rem;
+}
 
 @media (max-width : 600px) {
   #features .grid-item{
     margin-top: 15%;
   }
+}
+
+#about{
+  background-color: hsl(218, 28%, 13%);
+  padding-top: 5%;
+  line-height: 1.5;
+}
+
+.illustration-about{
+  width: 85%;
+  float: right;
+  vertical-align: middle;
+}
+
+#about .grid-item{
+  margin: auto;
+  padding-right: 10%;
+}
+
+#about h2{
+  font-size: 2.3rem;
+  max-width: 75%;
+}
+
+.cta {
+  text-decoration: none;
+  color: var(--cyan);
+  border-bottom: 1px solid var(--cyan);
+}
+.cta:hover{
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.cta-btn{
+  width: 12px;
+}
+
+@media (max-width : 600px) {
+  #about{
+    text-align: center;
+  }
+  .illustration-about{
+    float: none;
+  }
+  #about .grid-item{
+    text-align: left;
+    padding-right: 0;
+  }
+
+  #about h2{
+    font-size: 1.2rem;
+    max-width: 75%;
+  }
+  #about p{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width : 1024px) {
+  #about {
+    padding-top: 20%;
+  }
+  #about .container-fluid{
+    margin: 0 10%;
+  } 
 }
