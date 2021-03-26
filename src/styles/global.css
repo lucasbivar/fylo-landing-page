@@ -128,4 +128,20 @@ body{
   background-color: hsl(218, 28%, 13%);
   width: 100%;
   text-align: center;
+  line-height: 1.5;
+
+}
+
+#features .grid-item{
+  padding: 3% 10%;
+}
+
+#features .grid-item img{
+  margin-bottom: 6%;
+}
+
+@media (max-width : 600px) {
+  #features .grid-item{
+    margin-top: 15%;
+  }
 }
