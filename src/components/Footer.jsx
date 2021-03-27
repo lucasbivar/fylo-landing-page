@@ -18,7 +18,7 @@ import Newsletter from './Newsletter';
 
 export default function Footer(props) {
   let logo, facebook, instagram, twitter, phone, email;
-  if(props.theme){
+  if(props.theme === "light"){
     logo = fyloLogoLight;
     facebook = facebookIconLight;
     instagram = instagramIconLight;

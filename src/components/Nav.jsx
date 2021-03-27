@@ -4,7 +4,7 @@ import fyloLogoLight from "../assets/images/logo_light.svg";
 
 export default function Nav(props){
   let logo;
-  if(props.theme){
+  if(props.theme === "light"){
     logo = fyloLogoLight;
   }else{
     logo = fyloLogo;
