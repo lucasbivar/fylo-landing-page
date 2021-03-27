@@ -92,6 +92,7 @@ h1, h2, h3,h5{
 
 #title{
   background: var(--gradient) no-repeat center bottom -35px;
+  background-size: contain;
   padding-top: 6%;
   text-align: center;
   font-size: 1.2rem;
