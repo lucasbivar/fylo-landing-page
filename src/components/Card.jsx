@@ -8,7 +8,7 @@ export default function Card(props){
       <div className="user-info">
         <img className="profile-pic" src={props.image} alt="profile-pic" />
         <div className="about-user">
-          <h5>{props.name}</h5>
+          <strong>{props.name}</strong>
           <span>{props.role}</span>
         </div>
       </div>

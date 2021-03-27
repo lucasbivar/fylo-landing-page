@@ -1,6 +1,6 @@
 :root{
   --cyan: hsl(176, 68%, 64%);
-  --blue: hsl(198, 60%, 50%);
+  --blue: #0076A8;
   --mainBackground: hsl(217, 28%, 15%); 
   --textColor: hsl(0, 0%, 100%);
   --testemonialsBackground: hsl(218, 28%, 13%);
@@ -13,6 +13,7 @@
   --gradient: url("../assets/images/bg-curvy-desktop.svg");
   --newsletterText: #FFFFFF;
   --btn-theme: #fdfdfd;
+  --testemonialsHole: #BABABA;
 }
 
 * {
@@ -162,8 +163,9 @@ h1, h2, h3,h5{
 #features .grid-item img{
   margin-bottom: 6%;
 }
-#features h3{
-  font-size: 1.3rem;
+#features strong{
+  font-size: 1.2rem;
+  display: block;
 }
 
 @media (max-width : 600px) {
@@ -257,8 +259,12 @@ h1, h2, h3,h5{
 }
 
 #card span{
-  color: gray;
+  color: var(--testemonialsHole);
   font-size: 0.8rem;
+}
+
+#card strong{
+  display: block;
 }
 
 .profile-pic{

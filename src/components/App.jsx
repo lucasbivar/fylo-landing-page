@@ -26,6 +26,7 @@ export default function App() {
       document.documentElement.style.setProperty('--cardBackground',"hsl(219, 30%, 18%)");
       document.documentElement.style.setProperty('--footerBackground',"hsl(216, 53%, 9%)");    
       document.documentElement.style.setProperty('--btn-theme',"#fdfdfd");
+      document.documentElement.style.setProperty('--testemonialsHole',"#BABABA");
       document.getElementById("title").style.backgroundImage = "url("+ bgDark+")";
     }else{
       document.documentElement.style.setProperty('--textColor',"hsl(218, 28%, 13%)");
@@ -36,6 +37,7 @@ export default function App() {
       document.documentElement.style.setProperty('--cardBackground',"#EFF1F2");    
       document.documentElement.style.setProperty('--footerBackground',"#EBEEF0");    
       document.documentElement.style.setProperty('--btn-theme',"hsl(217, 28%, 15%)");  
+      document.documentElement.style.setProperty('--testemonialsHole',"#000000");
       document.getElementById("title").style.backgroundImage = "url("+ bgLight+")";
 
     }
