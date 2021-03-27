@@ -140,6 +140,7 @@ h1, h2, h3,h5{
 @media (max-width : 600px) {
   #title {
     padding-top: 30%;
+    background-size: unset;
   }
   #title .container-fluid{
     margin: 0;
