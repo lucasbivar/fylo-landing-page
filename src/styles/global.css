@@ -1,6 +1,16 @@
 :root{
   --cyan: hsl(176, 68%, 64%);
   --blue: hsl(198, 60%, 50%);
+  --mainBackground: hsl(217, 28%, 15%); 
+  --textColor: hsl(0, 0%, 100%);
+  --testemonialsBackground: hsl(218, 28%, 13%);
+  --cardBackground: hsl(219, 30%, 18%);
+  --featuresBackground: hsl(218, 28%, 13%);
+  --aboutBackground:  hsl(218, 28%, 13%);
+  --footerBackground:  hsl(216, 53%, 9%);
+  --newsletterBackground: hsl(217, 28%, 15%);
+  --btnTextColor: #FFFFFF;
+  --gradient: url("../assets/images/bg-curvy-desktop.svg");
 }
 
 * {
@@ -14,17 +24,19 @@ html {
 }
 
 body{
-  background-color: hsl(217, 28%, 15%);
-  color: hsl(0, 0%, 100%);
+  background-color: var(--mainBackground);
+  color: var(--textColor) ;
 }
 
-h1, h2, h3{
+h1, h2, h3,h5{
   font-family: Raleway, sans-serif;
 }
 
 .container-fluid{
   padding: 2% 5%;
 }
+
+/* Nav Section  */
 
 #nav-bar{
   font-family: Raleway;
@@ -33,10 +45,10 @@ h1, h2, h3{
 	margin-top: 2rem; 
 	padding: 0;
 	list-style: none;
- }
+}
 
 #nav-bar li {
-	float: right; 
+  float: right; 
 }
 
 #nav-bar li:first-child{
@@ -48,10 +60,15 @@ h1, h2, h3{
 }
 
 #nav-bar li a {
-		display: block;
-		padding: 0.5rem 0.7rem;
-		text-decoration: none;
-    color: hsl(0, 0%, 100%);
+  display: block;
+  padding: 0.5rem 0.7rem;
+  text-decoration: none;
+  color: var(--textColor);
+}
+@media (max-width : 1024px) {
+  #nav-bar .container-fluid{
+   margin: 0 10%;
+ } 
 }
 
 @media (max-width : 380px) {
@@ -72,7 +89,7 @@ h1, h2, h3{
 /* Title Section  */
 
 #title{
-  background: url("../assets/images/bg-curvy-desktop.svg") no-repeat center bottom -35px;
+  background: var(--gradient) no-repeat center bottom -35px;
   padding-top: 6%;
   text-align: center;
   font-size: 1.2rem;
@@ -97,7 +114,7 @@ h1, h2, h3{
 #title button {
   background: var(--blue);
   border-radius: 28px;
-  color: #ffffff;
+  color: var(--btnTextColor);
   font-size: 1.2rem;
   padding: 10px 40px 10px 40px;
   text-decoration: none;
@@ -114,9 +131,6 @@ h1, h2, h3{
   #title {
     padding-top: 15%;
   }
-  #title .container-fluid{
-    margin: 0 10%;
-  } 
 }
 
 @media (max-width : 600px) {
@@ -128,8 +142,10 @@ h1, h2, h3{
   } 
 }
 
+/* Features Section  */
+
 #features{
-  background-color: hsl(218, 28%, 13%);
+  background-color: var(--featuresBackground);
   width: 100%;
   text-align: center;
   line-height: 1.5;
@@ -153,8 +169,10 @@ h1, h2, h3{
   }
 }
 
+/* About Section  */
+
 #about{
-  background-color: hsl(218, 28%, 13%);
+  background-color:var(--aboutBackground);
   padding-top: 5%;
   line-height: 1.5;
 }
@@ -181,8 +199,8 @@ h1, h2, h3{
   border-bottom: 1px solid var(--cyan);
 }
 .cta:hover{
-  color: #ffffff;
-  border-bottom: 1px solid #ffffff;
+  color: var(--textColor);
+  border-bottom: 1px solid var(--textColor);
 }
 
 .cta-btn{
@@ -214,7 +232,216 @@ h1, h2, h3{
   #about {
     padding-top: 20%;
   }
-  #about .container-fluid{
-    margin: 0 10%;
-  } 
+  
+}
+
+/* Testemonials Section  */
+
+#testemonials{
+  background-color: var(--testemonialsBackground);
+  padding-top:8%;
+  padding-bottom: 16%;
+}
+
+/* Card */
+
+#card{
+  background-color: var(--cardBackground);
+  border-radius: 8px;
+  padding: 8%;
+  padding-top: 13%;
+  line-height: 1.5;
+}
+
+#card span{
+  color: gray;
+  font-size: 0.8rem;
+}
+
+.profile-pic{
+  border-radius: 50%;
+  width: 10%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.about-user{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5%;
+  width: 80%;
+  margin-top: 0;
+}
+
+.user-info{
+  margin-top: 5%;
+  line-height: 1;
+  vertical-align: middle;
+}
+#testemonials .container-fluid{
+  position: relative;
+}
+
+.quotes-icon{
+  position: absolute;
+  top: -2%;
+  left: 4.5%;
+}
+
+.grid-quotes{
+  position: relative;
+  height: fit-content;
+}
+
+/* Footer Section  */
+
+footer{
+  background-color:var(--footerBackground);
+  padding-top: 30%;
+  font-size: 0.9rem;
+}
+
+.footer-logo{
+  margin-bottom: 4%;
+}
+
+iframe{
+  width: 100%;
+
+}
+
+.footer li {
+  list-style-type: none;
+  padding: 4% 0;
+  vertical-align: middle;
+}
+
+.footer li img{
+  padding-right: 3%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer li:hover, #social-medias li:hover{
+  font-weight: bold;
+}
+
+#social-medias li img{
+  width: 14%;
+  vertical-align: middle;
+  padding-right: 4%;
+}
+
+#social-medias li{
+  vertical-align: middle;
+  padding: 4% 0;
+}
+
+#social-medias{
+  width: 100%;
+	float: left;
+	padding: 0;
+  padding-bottom: 2%;
+	list-style: none;
+}
+
+@media (max-width : 956px) {
+  footer {
+    padding-top: 30%;
+  }
+  
+  #social-medias li img{
+    width: 8%;
+  }
+}
+
+#newsletter{
+  width: 50%;
+  text-align: center;
+  background-color: var(--newsletterBackground);
+  margin:0 auto;
+  padding: 3%;
+  line-height: 1.5;
+  margin-top: -40%;
+  border-radius: 10px;
+  -webkit-box-shadow: 13px 11px 21px -4px rgba(0,0,0,0.43);
+  -moz-box-shadow: 13px 11px 21px -4px rgba(0,0,0,0.43);
+  box-shadow: 13px 11px 21px -4px rgba(0,0,0,0.43);
+}
+
+#newsletter button {
+  background: var(--blue);
+  border-radius: 28px;
+  color: var(--btnTextColor);
+  font-size: 1rem;
+  padding: 10px 30px 10px 30px;
+  text-decoration: none;
+  border: none;
+  margin-bottom: 5%;
+  margin-left: 3%;
+}
+
+#newsletter button:hover{
+  background: var(--cyan);
+  text-decoration: none;
+}
+
+#newsletter input{
+  width: 50%;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  padding: 1.2%;
+}
+#newsletter p{
+  padding: 3.5% 0;
+}
+
+@media(max-width: 1024px){
+  #newsletter{
+    width: 90%;
+    margin-top: -80%
+  }
+  footer{
+    padding-top: 60%;
+  }
+  #testemonials{
+    padding-bottom: 30%;
+  }
+  .footer-logo{
+    margin-top: 15%;
+  }
+}
+
+@media(max-width: 540px){
+  #newsletter input{
+    margin-bottom: 4%;
+    width: 70%;
+
+  }
+}
+
+.btn {
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 4%;
+  bottom: 4%;
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  outline: none;
+  border: none;
+  transition: margin-bottom 0.2s ease-in;
+  cursor: pointer;
+}
+
+.btn:hover{
+  margin-bottom: 1%;
+}
+
+.btn-theme{
+  width: 60%;
 }
