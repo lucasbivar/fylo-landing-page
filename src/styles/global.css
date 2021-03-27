@@ -11,6 +11,8 @@
   --newsletterBackground: hsl(217, 28%, 15%);
   --btnTextColor: #FFFFFF;
   --gradient: url("../assets/images/bg-curvy-desktop.svg");
+  --newsletterText: #FFFFFF;
+  --btn-theme: #fdfdfd;
 }
 
 * {
@@ -359,6 +361,7 @@ iframe{
   width: 50%;
   text-align: center;
   background-color: var(--newsletterBackground);
+  color: var(--newsletterText);
   margin:0 auto;
   padding: 3%;
   line-height: 1.5;
@@ -431,7 +434,7 @@ iframe{
   height: 65px;
   width: 65px;
   border-radius: 50%;
-  background-color: var(--blue);
+  background-color: var(--btn-theme);
   outline: none;
   border: none;
   transition: margin-bottom 0.2s ease-in;

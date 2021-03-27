@@ -3,20 +3,35 @@ import "../styles/global.css";
 import Grid from "@material-ui/core/Grid";
 import fyloLogo from "../assets/images/logo.svg";
 import fyloLogoLight from "../assets/images/logo_light.svg";
-import phoneIcon from "../assets/images/icon-phone.svg";
-import emailIcon from "../assets/images/icon-email.svg";
-import facebookIcon from "../assets/images/facebook.svg";
-import instagramIcon from "../assets/images/instagram.svg";
-import twitterIcon from "../assets/images/twitter.svg";
+import phoneIconDark from "../assets/images/icon-phone.svg";
+import phoneIconLight from "../assets/images/icon-phone_light.svg";
+import emailIconDark from "../assets/images/icon-email.svg";
+import emailIconLight from "../assets/images/icon-email_light.svg";
+import facebookIconLight from "../assets/images/facebook_light.svg";
+import facebookIconDark from "../assets/images/facebook.svg";
+import instagramIconDark from "../assets/images/instagram.svg";
+import instagramIconLight from "../assets/images/instagram_light.svg";
+import twitterIconDark from "../assets/images/twitter.svg";
+import twitterIconLight from "../assets/images/twitter_light.svg";
 import Newsletter from './Newsletter';
 
 
 export default function Footer(props) {
-  let logo;
+  let logo, facebook, instagram, twitter, phone, email;
   if(props.theme){
     logo = fyloLogoLight;
+    facebook = facebookIconLight;
+    instagram = instagramIconLight;
+    twitter = twitterIconLight;
+    email = emailIconLight;
+    phone = phoneIconLight;
   }else{
     logo = fyloLogo;
+    facebook = facebookIconDark;
+    instagram = instagramIconDark;
+    twitter = twitterIconDark;
+    email = emailIconDark;
+    phone = phoneIconDark;
   }
   return (
     <footer>
@@ -38,8 +53,8 @@ export default function Footer(props) {
           </Grid>
           <Grid item md={2} sm={12} xs={12}>
             <ul className="footer">
-              <li><img src={phoneIcon} alt="phone-icon" /> +55 (83) 99999-9999</li>
-              <li><img src={emailIcon} alt="email-icon" /> example@fylo.com</li>
+              <li><img src={phone} alt="phone-icon" /> +55 (83) 99999-9999</li>
+              <li><img src={email} alt="email-icon" /> example@fylo.com</li>
             </ul>
           </Grid>
           <Grid item md={2} sm={12} xs={12}>
@@ -59,9 +74,9 @@ export default function Footer(props) {
           </Grid>
           <Grid item md={2} sm={12} xs={12}>
             <ul id="social-medias">
-              <li><img src={facebookIcon} alt="facebook logo" /> Facebook</li>
-              <li><img src={instagramIcon} alt="instagram logo" /> Instagram</li>
-              <li><img src={twitterIcon} alt="twitter logo" /> Twitter</li>
+              <li><img src={facebook} alt="facebook logo" /> Facebook</li>
+              <li><img src={instagram} alt="instagram logo" /> Instagram</li>
+              <li><img src={twitter} alt="twitter logo" /> Twitter</li>
             </ul>
           </Grid>
         </Grid>
