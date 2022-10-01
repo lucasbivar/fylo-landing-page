@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import Button from "./Button";
 import bgDark from "../assets/images/bg-curvy-desktop.svg";
 import bgLight from "../assets/images/bg-curvy-desktop_light.svg";
+import { THEMES } from '../constants/theme';
 
 
 function setDarkTheme(){
@@ -37,18 +38,19 @@ function setLightTheme(){
   document.getElementById("title").style.backgroundImage = "url("+ bgLight+")";
 }
 
+const THEME_STORAGE_KEY = "theme"
 
 export default function App() {
 
-  let persistedValue = localStorage.getItem("theme");
+  let persistedValue = localStorage.getItem(THEME_STORAGE_KEY);
   if(persistedValue === null){
-    persistedValue = "dark"
-    localStorage.setItem("theme", persistedValue);
+    persistedValue = THEMES.dark
+    localStorage.setItem(THEME_STORAGE_KEY, persistedValue);
   }
   const [theme, setTheme] = useState(persistedValue);
 
   useEffect(()=>{
-    if(theme === "dark"){
+    if(theme === THEMES.dark){
       setDarkTheme();
     }else{
       setLightTheme();
@@ -56,12 +58,12 @@ export default function App() {
   },[theme]);
 
   function changeTheme(){
-    if(theme === "dark"){
-      setTheme("light");  
-      localStorage.setItem("theme", "light");
+    if(theme === THEMES.dark){
+      setTheme(THEMES.light);  
+      localStorage.setItem(THEME_STORAGE_KEY, THEMES.light);
     }else{
-      setTheme("dark"); 
-      localStorage.setItem("theme", "dark");
+      setTheme(THEMES.dark); 
+      localStorage.setItem(THEME_STORAGE_KEY, THEMES.dark);
     }
   }
 
