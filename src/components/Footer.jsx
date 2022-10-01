@@ -14,11 +14,12 @@ import instagramIconLight from "../assets/images/instagram_light.svg";
 import twitterIconDark from "../assets/images/twitter.svg";
 import twitterIconLight from "../assets/images/twitter_light.svg";
 import Newsletter from './Newsletter';
+import { THEMES } from '../constants/theme';
 
 
 export default function Footer(props) {
   let logo, facebook, instagram, twitter, phone, email;
-  if(props.theme === "light"){
+  if(props.theme === THEMES.light){
     logo = fyloLogoLight;
     facebook = facebookIconLight;
     instagram = instagramIconLight;

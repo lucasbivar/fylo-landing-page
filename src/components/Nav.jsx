@@ -1,10 +1,11 @@
 import React from "react";
 import fyloLogo from '../assets/images/logo.svg';
 import fyloLogoLight from "../assets/images/logo_light.svg";
+import { THEMES } from '../constants/theme';
 
 export default function Nav(props){
   let logo;
-  if(props.theme === "light"){
+  if(props.theme === THEMES.light){
     logo = fyloLogoLight;
   }else{
     logo = fyloLogo;
